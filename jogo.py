@@ -4,7 +4,7 @@ ept = 0
 resp = "S"
 
 print("|Bem-vindo ao JOKENPO| 1 - pedra ; 2 - tesoura ; 3 - papel")
-while resp == "S":
+while resp == "S" or resp == "s":
     for x in range(3):
         player1 = input("Jogador 1, informe sua jogada: ")
         while player1 != "1" and player1 != "2" and player1 != "3":
@@ -32,5 +32,7 @@ while resp == "S":
         else:
             print("Jogador02 foi o grande vencedor, parabéns!")
     resp = input("Deseja jogar novamente? [S/N]: ")
+    while (resp != "S" and resp != "s") and (resp != "N" and resp != "n"):
+        resp = input("Opçõa inválida, tente novamente: ")
 print()
 print("Jogo encerrado.")
